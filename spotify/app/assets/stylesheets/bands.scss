@@ -1,0 +1,46 @@
+// Place all the styles related to the bands controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+a {
+    align-self: center;
+    display: flex;
+    justify-content: flex-start
+}
+
+// header{
+//     justify-content: flex-start
+// }
+
+header form input {
+    align-self: flex-start;
+    display: flex;
+    justify-content: flex-start
+}
+
+.new-band{
+
+    align-self: flex-start;
+    display: flex;
+    justify-content: flex-start
+}
+
+
+p {
+    align-self: flex-start;
+    display: flex;
+    justify-content: center 
+}
+
+h2 {
+    align-self: flex-start;
+    display: flex;
+    justify-content: center 
+}
+
+#album-list {
+    align-self: center;
+    display: flex;
+    justify-content: center 
+}

@@ -1,0 +1,67 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ header {
+     color: red;
+     align-items: flex-end;
+     display: grid
+ }
+
+ header h1 {
+  color: rgb(30 215 96);
+  font-style: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+ }
+
+  header form {
+     color : green;
+     display: flex;
+    align-items: center;
+    justify-content: flex-end
+ }
+
+ h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+/* 
+ body {
+     background-color: rgb(30 215 96);
+     background-blend-mode: color-dodge
+ } */
+
+ body {
+background:
+linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+background-color: #131313;
+background-size: 20px 20px;
+color: rgb(30 215 96);
+ }
+
+#title {
+display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Spotify</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <header>
+  <h1 id="title">Spotify</h1>
+  </header>
+  <br>
+  <br>
+  <body>
+
+    <%= yield %>
+  </body>
+
+  <footer>
+  
+   <% if current_user%>
+  <%= "Hey #{current_user.email}"  %>
+  <% end %>
+      <% if current_user  %>
+      <%# request.path.starts_with?("/users")%>
+      <form action="<%= sessions_url %>" method="POST">
+        <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="Log out">
+      </form>
+    <% elsif request.path.starts_with?("/users") %>
+    <a href="<%=new_sessions_url%>">Log In</a>
+    <a href="<%=new_user_url%>">Create Account</a>
+    <% end %>
+    </footer>
+</html>

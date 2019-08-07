@@ -1,0 +1,19 @@
+<h1> <%= @track.title %> Homepage</h1>
+
+
+<h2></h2>
+<% @track.notes.each do |note|%>
+  <p> <%= note.note %> </p>
+    <% if note.user_id == current_user.id%>
+  <form action="<%= note_url(note) %>"  method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" id="note-list" value="Delete Note">
+  </form>
+  <% end %>
+<% end %>
+
+
+<a href="<%=album_url(@track.album_id)%>">Back to Album</a>
+<a href="<%=new_user_note_url(current_user.id)%>">Add Note</a>
+
